@@ -1,0 +1,12 @@
+<svg width="178" height="24" viewBox="0 0 178 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#33FF99"/>
+      <stop offset="100%" stop-color="#00CCFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="177" height="23" rx="11.5" fill="#18181B" stroke="url(#g4)" stroke-width="1"/>
+  <circle cx="16" cy="12" r="8" fill="url(#g4)" fill-opacity="0.2"/>
+  <path d="M16 5.5L20 11.5H16.5V18.5L12 11.5H15.5V5.5Z" fill="url(#g4)"/>
+  <text x="34" y="16" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#FFF" letter-spacing="1.5">PERFORMANCE AWARD</text>
+</svg>

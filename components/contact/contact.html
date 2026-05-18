@@ -1,0 +1,71 @@
+﻿<!--
+Component: contact
+Used on: about.html, contact.html, index.html, index-v2.html, service.html, service-single.html, work.html
+Editable fields:
+REPLACE: Contact text
+REPLACE: Contact form labels
+REPLACE: Contact links
+REPLACE: Contact image
+-->
+<!-- section-contact -->
+<div id="contact" class="flat-spacing pt-0">
+    <div class="section-contact">
+        <div class="contact-image">
+            <img src="assets/images/section/contact-image-bg.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="col-left">
+                        <div class="heading-section mb-48">
+                            <div class="heading-sub fw-semibold effectFade fadeUp">Contact</div>
+                            <div class="heading-title text-gradient-3 effectFade fadeRotateX">
+                                Let&rsquo;s Build <br> Something
+                            </div>
+                        </div>
+                        <div>
+                            <div class="contact-item mb-20 effectFade fadeRotateX">
+                                <i class="icon icon-envelope-solid"></i>
+                                <div class="content">
+                                    <div class="title fw-semibold mb-2">E-mail address</div>
+                                    <div class="text">hello@mantriklabs.com</div>
+                                </div>
+                            </div>
+                            <div class="contact-item effectFade fadeRotateX" data-delay="0.1">
+                                <i class="icon icon-headset-solid"></i>
+                                <div class="content">
+                                    <div class="title fw-semibold mb-2">Phone number</div>
+                                    <div class="text">+977 9764597917</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form class="form-contact effectFade fadeUp" action="https://formspree.io/f/meenpzyb" method="POST" enctype="multipart/form-data">
+                        <h4 class="heading fw-semibold">Fill this form below</h4>
+                        <fieldset class="mb-21">
+                            <label class="fw-semibold text-body-3 mb-20">Your Name</label>
+                            <input name="name" type="text" placeholder="Enter your full name" required>
+                        </fieldset>
+                        <fieldset class="mb-21">
+                            <label class="fw-semibold text-body-3 mb-20">Your Email / Phone</label>
+                            <input name="email" type="text" placeholder="Enter your email or phone" required>
+                        </fieldset>
+                        <fieldset class="mb-18">
+                            <label class="fw-semibold text-body-3 mb-0">More About The Project</label>
+                            <textarea name="message" class=""></textarea>
+                        </fieldset>
+                        <label class="attachment d-flex gap-8 align-items-center" style="cursor: pointer;">
+                            <i class="icon icon-paperclip-solid fs-24"></i>
+                            <span class="fw-semibold text-body-3" id="file-label-2">Add an Attachment</span>
+                            <input type="file" name="attachment" style="display: none;" onchange="document.getElementById('file-label-2').textContent = this.files[0] ? this.files[0].name : 'Add an Attachment'">
+                        </label>
+                        <button type="submit" class="tf-btn w-100">Submit Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /section-contact -->
