@@ -225,6 +225,8 @@
         var lastScrollTop = $(window).scrollTop();
         var scrollThreshold = 8;
         var topOffset = 80;
+        var upwardScrollDistance = 0;
+        var showAfterUpScroll = 56;
 
         $(window).on("scroll", function () {
             var currentScrollTop = $(this).scrollTop();
@@ -232,10 +234,17 @@
 
             if (Math.abs(delta) < scrollThreshold) return;
 
-            if (currentScrollTop <= topOffset || delta < 0) {
+            if (currentScrollTop <= topOffset) {
                 $header.removeClass("header-hidden");
-            } else {
+                upwardScrollDistance = 0;
+            } else if (delta > 0) {
                 $header.addClass("header-hidden");
+                upwardScrollDistance = 0;
+            } else {
+                upwardScrollDistance += Math.abs(delta);
+                if (upwardScrollDistance >= showAfterUpScroll) {
+                    $header.removeClass("header-hidden");
+                }
             }
 
             lastScrollTop = currentScrollTop;
