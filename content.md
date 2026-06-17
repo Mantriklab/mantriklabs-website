@@ -38,7 +38,7 @@
 **Headquarters:** Boudha, Kathmandu, Nepal
 **Serving:** Clients globally
 
-**Primary Email:** hello@mantriklabs.com
+**Primary Email:** official@mantriklabs.com
 **Contact Email:** contact@mantriklabs.com
 **Phone:** +977 9764597917
 **Website:** mantriklabs.com
@@ -665,7 +665,7 @@ Six posts, in this order:
 
 - **Location:** Boudha, Kathmandu, Nepal
 - **Email:** contact@mantriklabs.com
-- **Secondary Email:** hello@mantriklabs.com
+- **Secondary Email:** official@mantriklabs.com
 - **Phone:** +977 9764597917
 - **Office Hours:** Sun–Fri: 9am–6pm NST
 
@@ -733,7 +733,7 @@ Mobile Apps | Brand & Design | Custom AI
 Privacy Policy | Terms & Conditions
 
 **Contact in Footer:**
-hello@mantriklabs.com | +977 9764597917
+official@mantriklabs.com | +977 9764597917
 
 **Social Links:** (URLs to be added — use # as placeholder)
 LinkedIn | Twitter / X | Instagram
@@ -852,7 +852,7 @@ Typically within 2–4 hours. Emails monitored outside office hours too.
 - Sunday to Friday: 9am–6pm NST
 - Saturday: Closed
 
-**Email:** hello@mantriklabs.com | contact@mantriklabs.com
+**Email:** official@mantriklabs.com | contact@mantriklabs.com
 **Phone:** +977 9764597917
 **Location:** Boudha, Kathmandu, Nepal
 
@@ -864,7 +864,7 @@ Typically within 2–4 hours. Emails monitored outside office hours too.
 
 **Effective Date:** 2024
 **Company:** Mantrik Labs, Kathmandu, Nepal
-**Contact:** hello@mantriklabs.com
+**Contact:** official@mantriklabs.com
 
 ---
 
@@ -975,7 +975,7 @@ You have the right to:
 - **Deletion** — request deletion of your personal data
 - **Withdrawal** — withdraw consent for any non-essential data use
 
-To exercise these rights, email: hello@mantriklabs.com
+To exercise these rights, email: official@mantriklabs.com
 
 ---
 
@@ -998,7 +998,7 @@ on our website.
 
 ## 12. Contact
 
-**Email:** hello@mantriklabs.com
+**Email:** official@mantriklabs.com
 **Address:** Boudha, Kathmandu, Nepal
 
 ---
@@ -1009,7 +1009,7 @@ on our website.
 
 **Effective Date:** 2024
 **Company:** Mantrik Labs, Kathmandu, Nepal
-**Contact:** hello@mantriklabs.com
+**Contact:** official@mantriklabs.com
 
 ---
 
@@ -1188,7 +1188,7 @@ Continued engagement constitutes acceptance of updated terms.
 
 ## 15. Contact
 
-**Email:** hello@mantriklabs.com
+**Email:** official@mantriklabs.com
 **Address:** Boudha, Kathmandu, Nepal
 
 ---
@@ -1230,7 +1230,7 @@ A project is considered started once any of the following occurs:
 ## How to Cancel
 
 All cancellations must be submitted via official email to:
-hello@mantriklabs.com
+official@mantriklabs.com
 
 ---
 
@@ -1418,6 +1418,6 @@ We read and reply to every message.
 
 — The Mantrik Labs Team
 
-**hello@mantriklabs.com**
+**official@mantriklabs.com**
 **Boudha, Kathmandu, Nepal**
 **mantriklabs.com**

@@ -512,7 +512,7 @@ A clear problem statement, success metrics, access to sample data, and a stakeho
 
 ### 15.2 Contact Details
 Already correctly set to:
-- Email: hello@mantriklabs.com ✅
+- Email: official@mantriklabs.com ✅
 - Phone: +977 9764597917 ✅
 
 ### 15.3 Contact Page Quick FAQ (contact.html only)

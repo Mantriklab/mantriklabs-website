@@ -1878,14 +1878,20 @@ header.header-sticky {
   pointer-events: none;
 }
 
-.tf-header .header-inner {
-  max-width: 739px;
+.tf-header .header-shell {
+  max-width: 1040px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 8px 8px 32px;
+  gap: 24px;
+}
+
+.tf-header .header-inner {
+  display: flex;
+  align-items: center;
+  padding: 12px 32px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.5019607843);
   backdrop-filter: blur(44px);
@@ -1898,8 +1904,12 @@ header.header-sticky {
   font-size: 20px;
 }
 
+.tf-header .header-actions {
+  align-items: center;
+}
+
 .tf-header.header2 .header-inner {
-  max-width: 807px;
+  max-width: 560px;
 }
 
 @media (max-width: 991px) {
@@ -1913,9 +1923,13 @@ header.header-sticky {
     margin-bottom: -104px;
   }
 
-  .tf-header .header-inner {
+  .tf-header .header-shell {
     max-width: unset !important;
     margin: 0 32px;
+  }
+
+  .tf-header .header-inner {
+    display: none;
   }
 }
 
