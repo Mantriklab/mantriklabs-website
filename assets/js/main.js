@@ -84,6 +84,8 @@
     -------------------------------------------------------------------------*/
     var cursorTrail = () => {
         const canvas = document.getElementById("trail");
+        if (!canvas) return;
+
         const ctx = canvas.getContext("2d");
         let w = window.innerWidth,
             h = window.innerHeight;
@@ -93,6 +95,8 @@
         let points = [];
         let ripples = [];
         let idleTimer = null;
+        let animationFrame = null;
+        let isEnabled = localStorage.getItem("cursorEnabled") === "true";
 
         window.addEventListener("resize", () => {
             w = window.innerWidth;
@@ -102,6 +106,8 @@
         });
 
         window.addEventListener("mousemove", (e) => {
+            if (!isEnabled) return;
+
             points.push({ x: e.clientX, y: e.clientY });
             if (points.length > 10) points.shift();
 
@@ -109,15 +115,20 @@
             idleTimer = setTimeout(() => {
                 points = [];
             }, 100);
+
+            startDrawing();
         });
 
         window.addEventListener("click", (e) => {
+            if (!isEnabled) return;
+
             ripples.push({
                 x: e.clientX,
                 y: e.clientY,
                 radius: 0,
                 alpha: 1,
             });
+            startDrawing();
         });
 
         function draw() {
@@ -150,25 +161,45 @@
             });
             ripples = ripples.filter((r) => r.alpha > 0);
 
-            requestAnimationFrame(draw);
+            if (isEnabled && (points.length > 1 || ripples.length > 0)) {
+                animationFrame = requestAnimationFrame(draw);
+            } else {
+                animationFrame = null;
+            }
         }
-        draw();
+
+        function startDrawing() {
+            if (!animationFrame) {
+                animationFrame = requestAnimationFrame(draw);
+            }
+        }
+
+        function setCursorEnabled(enabled) {
+            isEnabled = enabled;
+            localStorage.setItem("cursorEnabled", enabled ? "true" : "false");
+            $("#trail").toggle(enabled);
+
+            if (enabled) {
+                startDrawing();
+            } else {
+                points = [];
+                ripples = [];
+                clearTimeout(idleTimer);
+                cancelAnimationFrame(animationFrame);
+                animationFrame = null;
+                ctx.clearRect(0, 0, w, h);
+            }
+        }
 
         // restore saved cursor state on every page
-        const cursorEnabled = localStorage.getItem("cursorEnabled") === "true";
-        if (cursorEnabled) {
+        if (isEnabled) {
             $("#trail").show();
             $("#cursor").prop("checked", true);
+            startDrawing();
         }
 
         $("#cursor").on("change", function () {
-            if ($(this).is(":checked")) {
-                $("#trail").show();
-                localStorage.setItem("cursorEnabled", "true");
-            } else {
-                $("#trail").hide();
-                localStorage.setItem("cursorEnabled", "false");
-            }
+            setCursorEnabled($(this).is(":checked"));
         });
     };
     /* Setting Color
