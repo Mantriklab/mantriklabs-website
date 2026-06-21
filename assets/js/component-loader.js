@@ -33,7 +33,7 @@
             return Promise.resolve();
         }
 
-        return fetch(path, { cache: "no-cache" })
+        return fetch(path)
             .then(function (response) {
                 if (!response.ok) {
                     throw new Error("Unable to load component: " + path);

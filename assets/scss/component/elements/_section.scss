@@ -108,7 +108,6 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-attachment: fixed;
         video,
         img {
             width: 100%;
@@ -119,6 +118,9 @@
     }
     .content-wrap {
         padding: 180px 0 160px;
+        .effectFade {
+            opacity: 1;
+        }
         .sub {
             display: flex;
             gap: 8px;
@@ -1925,7 +1927,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     .page-title {
         margin-bottom: 20px;
     }

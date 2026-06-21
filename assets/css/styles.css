@@ -1950,7 +1950,8 @@ header.header-sticky {
 
   .tf-header .header-shell {
     max-width: unset !important;
-    margin: 0 32px;
+    width: auto;
+    margin: 0 16px;
     padding: 0;
     justify-content: space-between;
   }
@@ -1967,6 +1968,16 @@ header.header-sticky {
 
   .tf-header .header-inner {
     display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .tf-header .header-shell {
+    margin: 0 12px;
+  }
+
+  .tf-header .logo-site img {
+    max-width: 150px;
   }
 }
 
@@ -2283,8 +2294,9 @@ header.header-sticky {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 82%;
+  box-sizing: border-box;
+  height: 100dvh;
+  width: min(360px, calc(100vw - 24px));
   max-width: 360px;
   background-color: #080808;
   display: flex;
@@ -2504,6 +2516,46 @@ header.header-sticky {
 
 .offcanvas-menu .nav-mb-item .mb-menu-link:hover::before {
   left: 100%;
+}
+
+@media (max-width: 575px) {
+  .offcanvas-menu .mb-container {
+    width: 100vw;
+    max-width: none;
+  }
+
+  .offcanvas-menu .mb-menu-header {
+    padding: 16px 18px 12px;
+  }
+
+  .offcanvas-menu .mb-logo img {
+    max-width: 150px;
+  }
+
+  .offcanvas-menu .nav-mb-item .mb-menu-link {
+    gap: 10px;
+    padding: 13px 18px;
+    font-size: 20px;
+  }
+
+  .offcanvas-menu .nav-mb-item .mb-menu-link:hover,
+  .offcanvas-menu .nav-mb-item .mb-menu-link.active {
+    padding-left: 18px;
+  }
+
+  .offcanvas-menu .mb-other-content {
+    padding: 18px 18px 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .offcanvas-menu .nav-mb-item .mb-menu-link {
+    font-size: 18px;
+  }
+
+  .offcanvas-menu .mb-arrow {
+    display: none;
+  }
 }
 
 /* Social / footer section */
@@ -5364,7 +5416,6 @@ button.animate-btn::after,
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .section-hero .hero-image video,
@@ -5377,6 +5428,10 @@ button.animate-btn::after,
 
 .section-hero .content-wrap {
   padding: 180px 0 160px;
+}
+
+.section-hero .content-wrap .effectFade {
+  opacity: 1;
 }
 
 .section-hero .content-wrap .sub {
@@ -7290,7 +7345,6 @@ button.animate-btn::after,
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .section-page-title .page-title {

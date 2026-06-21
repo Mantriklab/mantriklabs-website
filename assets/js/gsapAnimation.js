@@ -245,6 +245,11 @@
             gsap.registerPlugin(ScrollTrigger);
 
             document.querySelectorAll(".effectFade").forEach((el) => {
+                if (el.closest(".section-hero")) {
+                    gsap.set(el, { autoAlpha: 1, clearProps: "transform" });
+                    return;
+                }
+
                 let fromVars = { autoAlpha: 0 };
                 let toVars = { autoAlpha: 1, duration: 1, ease: "power3.out" };
                 let wrapper = null;

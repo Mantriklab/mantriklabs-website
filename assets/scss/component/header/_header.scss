@@ -93,7 +93,8 @@ header {
         margin-bottom: -104px;
         .header-shell {
             max-width: unset !important;
-            margin: 0 32px;
+            width: auto;
+            margin: 0 16px;
             padding: 0;
             justify-content: space-between;
         }
@@ -107,6 +108,14 @@ header {
         }
         .header-inner {
             display: none;
+        }
+    }
+    @include res(sm) {
+        .header-shell {
+            margin: 0 12px;
+        }
+        .logo-site img {
+            max-width: 150px;
         }
     }
 }
