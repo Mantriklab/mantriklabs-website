@@ -6086,16 +6086,34 @@ button.animate-btn::after,
   background: var(--neutral-900);
 }
 
-.featured-works-item .image.live-demo iframe {
+.featured-works-item .image.live-demo .live-demo-poster {
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.featured-works-item .image.live-demo iframe {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   border: 0;
+  opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
 .featured-works-item .image.live-demo.is-loaded iframe {
+  opacity: 1;
+  visibility: visible;
   pointer-events: auto;
+}
+
+.featured-works-item .image.live-demo.is-loaded .live-demo-poster {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .featured-works-item .image.live-demo.is-loaded .live-demo-trigger {
