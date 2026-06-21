@@ -47,7 +47,7 @@
     /* Infinite Slide 
     -------------------------------------------------------------------------*/
     var infiniteSlide = function () {
-        if ($(".infiniteSlide").length > 0) {
+        if ($(".infiniteSlide").length > 0 && $.fn.infiniteslide) {
             $(".infiniteSlide").each(function () {
                 var $this = $(this);
                 var style = $this.data("style") || "left";
@@ -277,6 +277,8 @@
     };
     // dot
     var dot = function () {
+        if (typeof window.gsap === "undefined" || typeof window.ScrollTrigger === "undefined") return;
+
         document.querySelectorAll(".pagi-dot").forEach(pagi => {
             const dots = pagi.querySelectorAll("span");
             const activeIndex = [...dots].findIndex(dot =>
@@ -355,4 +357,13 @@
             window.initSwipers();
         }
     });
+
+    window.initDeferredPageEnhancements = function () {
+        infiniteSlide();
+        counter();
+        dot();
+        if (typeof window.initSwipers === 'function') {
+            window.initSwipers();
+        }
+    };
 })(jQuery);
